@@ -1,0 +1,300 @@
+{
+	"id": "9aebb9bf-6786-4f5f-bc96-2e1b6b9c573f",
+	"name": "ecommerce",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+		"dd74123e-fc4e-4ddb-9b10-15f549a644e5",
+		"c2a54739-4c50-4223-a7d2-2f8ec53df9e1"
+	],
+	"folders": [
+		{
+			"id": "c2a54739-4c50-4223-a7d2-2f8ec53df9e1",
+			"name": "cart",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "9aebb9bf-6786-4f5f-bc96-2e1b6b9c573f",
+			"folder": null,
+			"order": [
+				"0981c992-3daa-4150-8c73-7e221972c58b",
+				"44b08fa9-fbad-4ccd-bb0e-47c64c310843",
+				"ca6c133c-f20a-48ed-8028-6da429c3375f",
+				"11f901af-5c16-4468-97d3-cd6a660ce7c7"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "dd74123e-fc4e-4ddb-9b10-15f549a644e5",
+			"name": "discounts",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "9aebb9bf-6786-4f5f-bc96-2e1b6b9c573f",
+			"folder": null,
+			"order": [
+				"98672976-ee22-4a16-8e50-bf93fe9de838",
+				"5a7c0c4c-48b5-45c2-8eca-ada2360c0bf1",
+				"e71e78c4-d28b-47fe-abc0-017d2afc1067"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"name": "products",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "9aebb9bf-6786-4f5f-bc96-2e1b6b9c573f",
+			"folder": null,
+			"order": [
+				"47aa63c1-fdf5-4bf3-8c10-6327dd80ee07",
+				"74ced95d-87fa-40b5-8e85-744b9594bfc3",
+				"fe6c39a1-4589-478c-9eed-2424c670370d",
+				"5c32d0af-cd66-40ab-9919-676ab5cbb9f8",
+				"cec41833-fd83-4fab-ac19-99b123032207"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "0981c992-3daa-4150-8c73-7e221972c58b",
+			"name": "add item to cart",
+			"url": "{{e_url}}cart/add/1",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "c2a54739-4c50-4223-a7d2-2f8ec53df9e1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "11f901af-5c16-4468-97d3-cd6a660ce7c7",
+			"name": "customer cart",
+			"url": "{{e_url}}cart/",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "c2a54739-4c50-4223-a7d2-2f8ec53df9e1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "44b08fa9-fbad-4ccd-bb0e-47c64c310843",
+			"name": "delete cart",
+			"url": "{{e_url}}cart/10",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "c2a54739-4c50-4223-a7d2-2f8ec53df9e1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "47aa63c1-fdf5-4bf3-8c10-6327dd80ee07",
+			"name": "add product",
+			"url": "{{e_url}}products/add",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"rawModeData": "{\n\t\"product_name\": \"my second product\",\n\t\"product_price\": \"50\",\n\t\"price_currency\": \"EUR\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5a7c0c4c-48b5-45c2-8eca-ada2360c0bf1",
+			"name": "delete selected discount",
+			"url": "{{e_url}}discounts/11",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "dd74123e-fc4e-4ddb-9b10-15f549a644e5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5c32d0af-cd66-40ab-9919-676ab5cbb9f8",
+			"name": "edit product",
+			"url": "{{e_url}}products/1",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"rawModeData": "{\n\t\"product_name\": \"my product updated\",\n\t\"product_price\": \"35\",\n\t\"price_currency\": \"USD\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "74ced95d-87fa-40b5-8e85-744b9594bfc3",
+			"name": "selected product",
+			"url": "{{e_url}}products/1",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "98672976-ee22-4a16-8e50-bf93fe9de838",
+			"name": "add discount to selected product",
+			"url": "{{e_url}}discounts/add",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "dd74123e-fc4e-4ddb-9b10-15f549a644e5",
+			"rawModeData": "{\n\t\"discount_type\": \"percentage\",\n\t\"discount_amount\": 10,\n\t\"product_id\":1\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ca6c133c-f20a-48ed-8028-6da429c3375f",
+			"name": "remove product of order cart",
+			"url": "{{e_url}}cart/product/1",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "c2a54739-4c50-4223-a7d2-2f8ec53df9e1",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "cec41833-fd83-4fab-ac19-99b123032207",
+			"name": "products search",
+			"url": "{{e_url}}products/search",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"rawModeData": "{\n\t\"product_name\": \"my second product\",\n\t\"product_price\": \"50\",\n\t\"price_currency\": \"EUR\",\n\t\"discount_amount\": \"10\",\n\t\"discount_type\": \"number\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e71e78c4-d28b-47fe-abc0-017d2afc1067",
+			"name": "edit discount",
+			"url": "{{e_url}}discounts/12",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "dd74123e-fc4e-4ddb-9b10-15f549a644e5",
+			"rawModeData": "{\n\t\"discount_type\": \"number\",\n\t\"discount_amount\": 100,\n\t\"product_id\":1\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fe6c39a1-4589-478c-9eed-2424c670370d",
+			"name": "delete selected product",
+			"url": "{{e_url}}products/2",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "b16748cd-6048-435e-9c4f-6a4d0535a5fc",
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
